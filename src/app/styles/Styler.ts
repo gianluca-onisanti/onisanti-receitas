@@ -10,7 +10,8 @@ export function useSwitcher(mode: "light" | "dark") {
           text: "#ffe7de",
         },
         primary: {
-          main: "#5f000e",
+          main: "#541f1f",
+          alt: "#5f000e",
         },
         secondary: {
           main: "#fcefef",
@@ -27,7 +28,7 @@ export function useSwitcher(mode: "light" | "dark") {
           shadow: "#541f1f",
         },
         button: {
-          primary: "#ffffff",
+          primary: "#541f1f",
           secondary: "#e57f78",
         },
       },
@@ -41,6 +42,7 @@ export function useSwitcher(mode: "light" | "dark") {
         },
         primary: {
           main: "#e57f78",
+          alt: "#ff92c4",
         },
         secondary: {
           main: "#704041",
@@ -57,8 +59,8 @@ export function useSwitcher(mode: "light" | "dark") {
           shadow: "#541f1f",
         },
         button: {
-          primary: "#ffffff",
-          secondary: "#5f000e",
+          primary: "#ffe7de",
+          secondary: "#541f1f",
         },
       },
     },
@@ -90,8 +92,8 @@ export function useStyles() {
         border: 4,
         borderRadius: "10px",
         borderColor: theme.palette.secondary.main,
-        color: theme.palette.button.primary,
-        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.secondary.main,
+        backgroundColor: theme.palette.button.primary,
         justifyContent: "space-around",
         transition: "all 0.3s ease-in-out",
         "&:hover": {

@@ -23,14 +23,17 @@ export default function HomePage() {
   };
 
   return (
-    <Container sx={{ textAlign: "center" }}>
-      <Grid2 container spacing={2} alignItems={"center"}>
+    <Container>
+      <Grid2 mt={4} container spacing={{ xs: 1, md: 6 }} alignItems={"center"}>
         {/* Para estudo: 
           XS = ExtraSmall (Mobile); 
           MD = Medium (Telas P e Tablets); 
           LG = Large (PCs e TVs); 
         */}
-        <Grid2 size={{ xs: 12, md: 6, lg: 6 }}>
+        <Grid2
+          sx={{ textAlign: { xs: "center", md: "end", lg: "end" } }}
+          size={{ xs: 12, md: 6, lg: 6 }}
+        >
           <Image
             priority
             alt="Logo"
@@ -48,13 +51,16 @@ export default function HomePage() {
             }}
           />
         </Grid2>
-        <Grid2 size={{ xs: 12, md: 6, lg: 6 }}>
+        <Grid2
+          sx={{ textAlign: { xs: "center", md: "start", lg: "start" } }}
+          size={{ xs: 12, md: 6, lg: 6 }}
+        >
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
-              gap: 2,
+              gap: 4,
             }}
           >
             <div>
