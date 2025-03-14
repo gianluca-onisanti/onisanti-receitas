@@ -1,7 +1,7 @@
-import { AppBar, Toolbar, Typography, useTheme } from "@mui/material";
+import { AppBar, Box, Toolbar, useTheme } from "@mui/material";
 import ThemeToggle from "./ThemeToggle";
-import { useStyles, useSwitcher } from "../styles/Styler";
-
+import { useStyles } from "../styles/Styler";
+import Image from "next/image";
 export default function Header() {
   const theme = useTheme();
   const sx = useStyles();
@@ -9,10 +9,28 @@ export default function Header() {
   return (
     <AppBar sx={sx.toolbar} position="static">
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Receitas dos Onisanti
-        </Typography>
-        <ThemeToggle />
+        <Image
+          priority
+          src={`/images/${theme.palette.mode}_letter.png`}
+          alt="Onisanti Receitas"
+          width={112.75}
+          height={31}
+          style={{
+            width: "auto",
+            height: "auto",
+          }}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            position: "absolute",
+            width: "100%",
+            marginLeft: "20px",
+            justifyContent: "flex-end",
+          }}
+        >
+          <ThemeToggle />
+        </Box>
       </Toolbar>
     </AppBar>
   );

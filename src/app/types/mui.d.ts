@@ -8,12 +8,26 @@ declare module "@mui/material/styles" {
       main: string;
       text: string;
     };
+    logo: {
+      shadow: string;
+    };
+    button: {
+      primary: string;
+      secondary: string;
+    };
   }
 
   interface PaletteOptions {
     box?: {
       main?: string;
       text?: string;
+    };
+    logo?: {
+      shadow?: string;
+    };
+    button?: {
+      primary?: string;
+      secondary?: string;
     };
   }
 }

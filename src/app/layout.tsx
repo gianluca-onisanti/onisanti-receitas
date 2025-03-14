@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <AppThemeProvider>
           <CssBaseline />
           <Header />
-          <Box sx={{ p: 4 }}>{children}</Box>
+          <Box>{children}</Box>
         </AppThemeProvider>
       </body>
     </html>

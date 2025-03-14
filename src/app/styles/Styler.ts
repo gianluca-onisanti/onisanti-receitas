@@ -10,10 +10,10 @@ export function useSwitcher(mode: "light" | "dark") {
           text: "#ffe7de",
         },
         primary: {
-          main: "#1976d2",
+          main: "#5f000e",
         },
         secondary: {
-          main: "#9c27b0",
+          main: "#fcefef",
         },
         background: {
           default: "#ffe7de",
@@ -22,6 +22,13 @@ export function useSwitcher(mode: "light" | "dark") {
         text: {
           primary: "#212121",
           secondary: "#757575",
+        },
+        logo: {
+          shadow: "#541f1f",
+        },
+        button: {
+          primary: "#ffffff",
+          secondary: "#e57f78",
         },
       },
     },
@@ -33,10 +40,10 @@ export function useSwitcher(mode: "light" | "dark") {
           text: "#541f1f",
         },
         primary: {
-          main: "#90caf9",
+          main: "#e57f78",
         },
         secondary: {
-          main: "#ce93d8",
+          main: "#704041",
         },
         background: {
           default: "#541f1f",
@@ -45,6 +52,13 @@ export function useSwitcher(mode: "light" | "dark") {
         text: {
           primary: "#ffffff",
           secondary: "#bdbdbd",
+        },
+        logo: {
+          shadow: "#541f1f",
+        },
+        button: {
+          primary: "#ffffff",
+          secondary: "#5f000e",
         },
       },
     },
@@ -59,13 +73,34 @@ export function useStyles() {
   return {
     toolbar: {
       display: "flex",
-      transform: "translateX(50%)",
-      width: "50%",
+      justifyContent: "space-between",
+      alignItems: "center",
+      width: "325px",
       borderRadius: "25px",
       padding: "0 10px",
-      margin: "10px",
+      margin: "10px auto",
       backgroundColor: theme.palette.box.main,
       color: theme.palette.box.text,
+    },
+    button: {
+      primary: {
+        fontFamily: "font",
+        width: 250,
+        boxShadow: "4px 4px #00000050",
+        border: 4,
+        borderRadius: "10px",
+        borderColor: theme.palette.secondary.main,
+        color: theme.palette.button.primary,
+        backgroundColor: theme.palette.primary.main,
+        justifyContent: "space-around",
+        transition: "all 0.3s ease-in-out",
+        "&:hover": {
+          color: theme.palette.primary.main,
+          backgroundColor: theme.palette.button.secondary,
+          borderColor: theme.palette.primary.main,
+          transform: "scale(1.1)",
+        },
+      },
     },
   };
 }
